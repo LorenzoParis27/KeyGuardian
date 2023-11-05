@@ -11254,7 +11254,7 @@ function checkStrength() {
       timeInd.textContent = "Your password can be bruteforced in"
 
 
-      setTimeout(() => {resultbar.style.height = "450px"}, 50)
+      setTimeout(() => {resultbar.style.height = "420px"}, 50)
       resultbar.style.opacity = "1"
 
       setTimeout(() => {reviewDiv.style.display="flex"}, 500)
