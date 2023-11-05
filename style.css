@@ -1,0 +1,511 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    background-color: #fff; 
+}
+
+.graybar {
+    width: 100%;
+    background-color: #151922;
+    color: white;
+}
+
+.whitebar {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    color: black;
+}
+
+#graybar1 {
+    transition: 0.45s;
+}
+
+nav {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: #151922;
+}
+
+nav > div {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logodiv {
+}
+
+#logo {
+    width: 425px;
+}
+
+#linkdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.linkcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.linkcont > div:first-child > h1 {
+    color: white;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 1.35rem;
+    text-decoration: none;
+}
+
+.linkcont > div:last-child {
+    width: 0%;
+    height: 2.5px;
+    background-color: #00ADEF;
+}
+
+#tool1bar {
+    width: 100%;
+}
+
+.linkcont:hover > div:last-child {
+    width: 100%;
+}
+
+#contentbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 80px;
+    transition: 0.45s;
+    padding-top: 55px;
+    padding-bottom: 90px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#titleDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+#title {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-family: 'Quicksand';
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.5rem;
+    font-family: 'Questrial';
+    line-height: 175%;
+}
+
+#subtitle {
+    text-align: center;
+}
+
+#inputDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    transition: 0.45s;
+    color: black;
+}
+
+#inputDiv > div:first-child {
+    width: 420px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding-left: 25px;
+    padding-right: 15px;
+}
+
+#inputDiv > div > input {
+    width: 310px;
+    height: 60px;
+    outline: none;
+    border : none;
+    padding-inline: 0px;
+    background-color: white;
+    font-family: 'Quicksand';
+    font-size: 24px;
+    padding-left: 5px;
+}
+
+#send {
+    width: 60px;
+    cursor: pointer;
+}
+
+#resultbar {
+    width: 420px;
+    height: 0px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    opacity: 0;
+    transition: 0.45s;
+    background-color:#f1f5f8;
+}
+
+#reviewCont {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.45s;
+    gap: 30px  !important;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+
+@keyframes animationInput {
+    from {height: 0px;}
+    to {height: fit-content !important;}
+}
+
+
+#strenghtDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s;
+}
+
+#strenghtbar {
+    width: 340px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 1s;
+}
+
+#strenghtbarcol {
+    width: 0%;
+    height: 20px;
+    border-radius: 10px;
+    background-image: url(images/images/background.png);
+    transition: 1s;
+}
+
+#strenght {
+    margin-top: 20px;
+    font-size: 1.75rem;
+    font-family: 'Questrial';
+    font-weight: 500;
+    opacity: 0;
+    transition: 1s;
+}
+
+#timeDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    text-align: center;
+    transition: 1s;
+}
+
+#timeDiv >div:first-child {
+    font-family: 'Quicksand';
+    font-size: 1.5rem;
+    transition: 1s;
+}
+
+#time {
+    margin-top: 20px;
+    font-family: 'Questrial';
+    font-weight: 500;
+    font-size: 1.75rem;
+    transition: 1s;
+}
+
+#tip {
+    font-family: 'Quicksand';
+    display: flex;
+    justify-self: center;
+    opacity: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: 1s;
+}
+
+@keyframes opacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.article {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.contartdiv {
+    width: 65%;
+    display: flex;
+    align-items: center;
+}
+
+.contart {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    height: fit-content;
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line > div {
+    width: 10px;
+    height : calc(100%);
+    background-color: #00ADEF;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h3 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 100%;
+}
+
+.image {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#computer {
+    height: 200px;
+}
+
+#dictionary {
+    height: 275px;
+}
+
+#aboutus {
+    height: 200px;
+}
+
+#store {
+    height: 250px;
+}
+
+#graybar2 > article {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    gap: 40px;
+}
+
+.right {
+    text-align: right;
+}
+
+
+#whitebar2 > article {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+    width: 100%;
+}
+
+#whitebar2 > article > div:first-child {
+    text-align: center;
+}
+
+#whitebar2 > article > div:last-child {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+}
+
+#whitebar2 > article > div:last-child > div{
+    width: calc(100% / 3);
+}   
+
+.textGrid {
+    text-align: center;
+}
+
+.imageGrid > img {
+    width: 275px;
+}
+
+.imageGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    font-family: 'Quicksand';
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #383c43;
+}
+
+#copyright > div {
+    color: white;
+    font-family: 'Quicksand';
+    font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 1500px)  {
+    .imageGrid > img {
+        width: 200px;
+    }
+    h4 {
+        font-size: 1.9rem;
+    }
+    #linkdiv {
+        display: none;
+    }
+    nav > div {
+        justify-content: center;
+    }
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1250px)  {
+    .article {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 90px;
+        padding-bottom: 90px;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+    #graybar2 > article {
+        flex-direction: column-reverse;
+        gap: 70px;
+    }
+
+    #whitebar3 > article {
+        flex-direction: column-reverse;
+        gap: 70px;
+    }
+
+    .image {
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contartdiv{
+        width: 100%;
+    }
+    
+    #computer {
+        height: 175px;
+    }
+
+    #aboutus {
+        height: 175px;
+    }
+    
+    #store {
+        height: 225px;
+    }
+    
+    #dictionary {
+        height: 250px;
+    }
+
+    #whitebar2 > article > div:last-child{
+        justify-content: center;
+    }
+
+    #whitebar2 > article > div:last-child > div{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 800px)  {
+    html {
+        font-size: 12px;
+    }
+    #computer {
+        height: 150px;
+    }
+    
+    #dictionary {
+        height: 225px;
+    }
+    .imageGrid > img {
+        width: 175px;
+    }
+}
+
